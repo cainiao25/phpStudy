@@ -20,5 +20,46 @@
      *              例：print_r($frank = ['11','22','33']);
      */
 
-     
+
+
+    //  定义数组
+    $arr = [1,2,3,4,5];
+    // echo 数据简单的数据类型
+    // echo $arr[0];
+    $arr[99] = 100; // php是直接添加到当前的数组后面，前面的下标内容不会空
+    // var_dump(变量) 数据类型
+    // print_r(数组) 数组的输出方式     
+
+    var_dump($arr);
+    echo '<br/>';
+    print_r($arr);
+    //注意: php里面的数组和js里面不一样
+
+    // 2。$arr =array(key => value,...)
+    $arr2 =array('name' => 'huoshan','sex' => '男', 'age' => 99);
+    print_r($arr2);
+    echo $arr2['name'];
+
+
+    //3.$arr=[key => value,...]
+    $arr3=['data' => '数据1','data2' => '数据2'];
+    print_r($arr3);
+
+    echo '<hr>/';
+
+    // 4. foreach 遍历数组
+
+    // 语法1 ： foreach(数组名字 as 每一项内容 ) {  }
+    // foreach ($arr2 as $item) {
+    //     echo $item;
+    
+    // };
+
+    // 语法2 如果要拿遍历的key   foreach(数组名字 as $key=>$value){ }
+    foreach($arr2 as $key=> $value) {
+        echo $key.':'.$value.'<br/>';
+    }
+    //!!!! 如果循环次数低于一万次以下，一般使用foreach去遍历。如果是一万次以上，可以使用for循环。
+
+
 ?>
